@@ -19,6 +19,10 @@ public class UserUseCase implements IUserServicePort {
     }
 
     @Override
+    public void saveOwner(User user) {
+        userPersistencePort.saveOwner(user);
+    }
+    @Override
     public void deleteUser(User user) {
         userPersistencePort.deleteUser(user);
     }

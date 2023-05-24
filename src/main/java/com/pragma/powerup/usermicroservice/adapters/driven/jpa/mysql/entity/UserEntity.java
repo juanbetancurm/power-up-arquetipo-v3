@@ -28,4 +28,7 @@ public class UserEntity {
     @ManyToOne
     @JoinColumn(name = "id_role")
     private RoleEntity roleEntity;
+    @ManyToOne
+    @JoinColumn(name = "id_owner")
+    private OwnerEntity ownerEntity;
 }

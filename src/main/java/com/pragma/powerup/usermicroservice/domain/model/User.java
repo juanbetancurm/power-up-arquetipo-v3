@@ -5,10 +5,13 @@ public class User {
     private Person person;
     private Role role;
 
-    public User(Long id, Person person, Role role) {
+    private Owner owner;
+
+    public User(Long id, Person person, Role role, Owner owner) {
         this.id = id;
         this.person = person;
         this.role = role;
+        this.owner = owner;
     }
 
     public Long getId() {
@@ -33,5 +36,13 @@ public class User {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public Owner getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Owner owner) {
+        this.owner = owner;
     }
 }
