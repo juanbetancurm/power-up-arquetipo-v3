@@ -63,6 +63,41 @@ public class ControllerAdvisor {
         return ResponseEntity.status(HttpStatus.CONFLICT)
                 .body(Collections.singletonMap(RESPONSE_ERROR_MESSAGE_KEY, MAIL_ALREADY_EXISTS_MESSAGE));
     }
+
+    @ExceptionHandler(InvalidMailException.class)
+    public ResponseEntity<Map<String, String>> handleInvalidMailException(
+            InvalidMailException invalidMailException) {
+        return ResponseEntity.status(HttpStatus.CONFLICT)
+                .body(Collections.singletonMap(RESPONSE_ERROR_MESSAGE_KEY, INVALID_MAIL_MESSAGE));
+    }
+
+    @ExceptionHandler(InvalidNullFieldsException.class)
+    public ResponseEntity<Map<String, String>> handleInvalidNullFieldsException(
+            InvalidNullFieldsException invalidNullFieldsException) {
+        return ResponseEntity.status(HttpStatus.CONFLICT)
+                .body(Collections.singletonMap(RESPONSE_ERROR_MESSAGE_KEY, INVALID_NULL_FIELDS_MESSAGE));
+    }
+
+    @ExceptionHandler(InvalidPhoneNumberException.class)
+    public ResponseEntity<Map<String, String>> handleInvalidPhoneNumberException(
+            InvalidPhoneNumberException invalidPhoneNumberException) {
+        return ResponseEntity.status(HttpStatus.CONFLICT)
+                .body(Collections.singletonMap(RESPONSE_ERROR_MESSAGE_KEY, INVALID_PHONE_NUMBER_MESSAGE));
+    }
+    @ExceptionHandler(InvalidIdNumberException.class)
+    public ResponseEntity<Map<String, String>> handleInvalidIdNumberException(
+            InvalidIdNumberException invalidIdNumberException) {
+        return ResponseEntity.status(HttpStatus.CONFLICT)
+                .body(Collections.singletonMap(RESPONSE_ERROR_MESSAGE_KEY, INVALID_ID_NUMBER_MESSAGE));
+    }
+
+    @ExceptionHandler(InvalidIdDocumentException.class)
+    public ResponseEntity<Map<String, String>> handleInvalidIdDocumentException(
+            InvalidIdDocumentException invalidIdDocumentException) {
+        return ResponseEntity.status(HttpStatus.CONFLICT)
+                .body(Collections.singletonMap(RESPONSE_ERROR_MESSAGE_KEY, INVALID_ID_DOCUMENT_MESSAGE));
+    }
+
     @ExceptionHandler(PersonNotFoundException.class)
     public ResponseEntity<Map<String, String>> handlePersonNotFoundException(
             PersonNotFoundException personNotFoundException) {

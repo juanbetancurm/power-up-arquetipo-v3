@@ -21,6 +21,11 @@ public class Constants {
     public static final String PERSON_ALREADY_EXISTS_MESSAGE = "A person already exists with the DNI number provided";
     public static final String OWNER_ALREADY_EXISTS_MESSAGE = "An owner already exists with the DNI number provided";
     public static final String MAIL_ALREADY_EXISTS_MESSAGE = "A person with that mail already exists";
+    public static final String INVALID_MAIL_MESSAGE = "The email you submitted is not a valid email.";
+    public static final String INVALID_NULL_FIELDS_MESSAGE = "Please fill in all required fields. Leaving them blank is not allowed.";
+    public static final String INVALID_PHONE_NUMBER_MESSAGE = "The phone number you submitted is not a valid number.";
+    public static final String INVALID_ID_NUMBER_MESSAGE = "The id number you submitted is not a valid number.";
+    public static final String INVALID_ID_DOCUMENT_MESSAGE = "The document number you submitted is not a valid number.";
     public static final String PERSON_NOT_FOUND_MESSAGE = "No person found with the id provided";
     public static final String OWNER_NOT_FOUND_MESSAGE = "No owner found with the id provided";
     public static final String ROLE_NOT_FOUND_MESSAGE = "No role found with the id provided";
